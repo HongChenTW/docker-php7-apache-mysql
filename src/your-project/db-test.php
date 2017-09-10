@@ -2,7 +2,7 @@
 
 try {
     $db = new PDO(
-	    'mysql:host=db;dbname=docker-table;port=3306;charset=utf8',
+	    'mysql:host=db;dbname=docker-database;port=3306;charset=utf8',
 		'root',
 		'rootpassword'
 	);
