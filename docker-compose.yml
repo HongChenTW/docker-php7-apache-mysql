@@ -1,0 +1,19 @@
+web:
+  build: .
+  links:
+    - db
+  ports:
+    - 80:80
+  volumes:
+    - ./www/html:/var/www/html
+    - ./src/your-project/:/var/www/html/your-project
+
+db:
+  image: mysql:latest
+  restart: always
+  volumes:
+    - ./mysql:/var/lib/mysql
+  environment:
+    MYSQL_ROOT_PASSWORD: rootpassword
+  ports:
+    - 8887:3306
